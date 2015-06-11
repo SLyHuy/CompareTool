@@ -6,8 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-		<title>Bootstrap 101 Template</title>
+		<title>Compare Tool</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.min.js"></script>
 			<script src="js/respond.min.js"></script>
@@ -15,26 +16,184 @@
 	</head>
 	<body>
 		<!-- Navigation -->
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Compare Tool</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-          <ul class="nav navbar-nav">
-            
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Navigation -->
+		<nav class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Compare Tool</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="https://github.com/SLyHuy/CompareTool/" target="_blank">Source Code</a></li>
+						<li><a href="http://s-coding.com" target="_blank">Blog</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- End Navigation -->
 
+		<!-- form -->
+		<div class="container">
+			<form>
+				<div class="form-group">
+					<label for="url1">URL of Product 1</label>
+					<input type="email" class="form-control" id="url1" placeholder="http://...">
+				</div>
+				<div class="form-group">
+					<label for="url2">URL of Product 2</label>
+					<input type="password" class="form-control" id="url2" placeholder="http://...">
+				</div>				
+				<button type="submit" class="btn btn-lg btn-primary">Compare</button>
+			</form>
+		</div>
+		<!-- end form -->
+
+		<div class="container" id="view-result">
+			<div class="row">
+				<div class="col-md-6">
+					<table class="table table-responsive">
+						<thead>
+							<tr>								
+								<th class="s-column-1"></th>
+								<th>
+									<a href="#">Product Name 1</a>
+									<div class="wrap-rating">
+										<div class="inner-rating" title="4 sao">
+											<div class="rating" style="width: 85%;"></div>
+										</div>
+										<span class="small-text">(127 đánh giá)</span>
+									</div>
+								</th>
+								<th>
+									<a href="#">Product Name 2</a>
+									<div class="wrap-rating">
+										<div class="inner-rating" title="2.5 sao">
+											<div class="rating" style="width: 35%;"></div>
+										</div>
+										<span class="small-text">(89 đánh giá)</span>
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Hình ảnh</td>
+								<td>
+									<img src="http://static-02.lazada.vn/p/apple-iphone-6-16gb-xam-hang-nhap-khau-4335-796042-2-zoom.jpg" class="img-responsive img-thumbnail" alt="Product Name 1">
+								</td>								
+								<td>
+									<img src="http://static-02.lazada.vn/p/alcatel-one-touch-idol-x-6040d-16gb-o-9516-336532-1-zoom.jpg" class="img-responsive img-thumbnail" alt="Product Name 2">
+								</td>
+							</tr>
+							<tr>								
+								<td>Giá</td>
+								<td><span class="price label label-danger">15.499.000 VND</span></td>
+								<td><span class="price label label-danger">9.499.000 VND</span></td>
+							</tr>
+							<tr>								
+								<td>Còn hàng</td>
+								<td><span class="text-danger glyphicon glyphicon-remove"></span></td>
+								<td><span class="text-success glyphicon glyphicon glyphicon-ok"></span></td>
+							</tr>
+							<tr>								
+								<td>Trong hộp</td>
+								<td>
+									<ul>
+										<li>1 x Máy</li>
+										<li>1 x Sạc</li>
+										<li>1 x Cáp</li>
+										<li>1 x Tai nghe</li>
+										<li>1 x Sách thông tin</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li>1 x Máy</li>
+										<li>1 x Sạc</li>
+										<li>1 x Cáp</li>
+										<li>1 x Tai nghe</li>
+										<li>1 x Sách thông tin</li>
+									</ul>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Màu</td>
+								<td>Trắng</td>
+								<td>Vàng</td>
+							</tr>
+
+							<tr>
+								<td>Pin</td>
+								<td>Li-Po 1810 mAh</td>
+								<td>2000mAh</td>
+							</tr>
+
+							<tr>
+								<td>Tốc độ CPU (GHz)</td>
+								<td>1.40</td>
+								<td>1.8</td>
+							</tr>
+
+							<tr>
+								<td>Kích thước màn hình</td>
+								<td>4.7</td>
+								<td>5.0</td>
+							</tr>
+
+							<tr>
+								<td>Độ phân giải màn hình (pixels)</td>
+								<td>750 x 1334</td>
+								<td>750 x 1334</td>
+							</tr>
+
+							<tr>
+								<td>Đặc điểm hiển thị</td>
+								<td>Chống chói</td>
+								<td></td>
+							</tr>
+
+							<tr>
+								<td>Dung lượng ổ cứng (GB)</td>
+								<td>16.0</td>
+								<td>32.0</td>
+							</tr>
+
+							<tr>
+								<td>Độ phân giải camera (MP)</td>
+								<td>8.0</td>
+								<td>13.1</td>
+							</tr>
+
+							<tr>
+								<td>Model</td>
+								<td>iPhone 6</td>
+								<td>OT Idol X</td>
+							</tr>
+
+							<tr>
+								<td>Hệ điều hành</td>
+								<td>iOS 8.0</td>
+								<td>Android</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+		<footer class="container">
+			<p>Application Compare Tool - 2015 by <a href="http://s-coding.com" target="_blank">Huy Lý</a>.</p>
+		</footer>
+		
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

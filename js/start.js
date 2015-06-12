@@ -163,6 +163,7 @@ var CompareTool = (function($, window, undefined){
 		});
 
 		function whenError(){
+			$('#form-alert').remove();
 			$('<div id="form-alert" class="alert alert-danger fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> Network error, please try again.</div>')
 			.appendTo($('#compare-form').parent());
 			callback && callback(false);

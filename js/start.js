@@ -211,8 +211,8 @@ var CompareTool = (function($, window, undefined){
 jQuery(document).ready(function($){
 
 	/* Input for testing */
-	$('#url1').val('http://www.lazada.vn/apple-iphone-6-16gb-xam-hang-nhap-khau-240697.html');
-	$('#url2').val('http://www.lazada.vn/alcatel-one-touch-idol-x-6040d-16gb-do-150683.html');
+	$('#url1').val('http://www.lazada.vn/apple-iphone-5s-16gb-vang-hang-nhap-khau-2140185.html');
+	$('#url2').val('http://www.lazada.vn/apple-iphone-6s-64gb-vang-hang-nhap-khau-1323106.html');
 	/* End input for testing */
 
 
@@ -220,11 +220,11 @@ jQuery(document).ready(function($){
 		listInput: [{
 			name: 'url1',
 			regex: [/\d|\w/, /https?\:\/\/\w+((\:\d+)?\/\S*)?/],
-			mess: ['Vui lòng nhập URL', 'Vui lòng nhập URL hợp lệ. Ví dụ: http://google.com']
+			mess: ['Please input an URL', 'Please input a valid URL. Eg: http://google.com']
 		},{
 			name: 'url2',
 			regex: [/\d|\w/, /https?\:\/\/\w+((\:\d+)?\/\S*)?/],
-			mess: ['Vui lòng nhập URL', 'Vui lòng nhập URL hợp lệ. Ví dụ: http://google.com']
+			mess: ['Please input an URL', 'Please input a valid URL. Eg: http://google.com']
 		}],
 		checkBeforeSubmit: function(inputs){
 			CompareTool.doCompare(inputs[0].val(), inputs[1].val());
